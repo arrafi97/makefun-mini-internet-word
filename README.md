@@ -11,17 +11,19 @@ An entry for the make.fun Mini
 
 > Catalog
 
-A catalog of everything anyone has ever made, said or sold, and, read the
-other way, a log of cats.
+Everything the internet is, in seven letters. It is a catalog: every shop,
+library, archive and marketplace ever built, filed side by side and open all
+hours. And read the other way round, it is mostly a log of cats — the other
+thing the internet is famous for cataloguing. One word, both readings true.
 
-## How it works
+## Running it
 
-`main.ts` is a small Node 22 program. It uses only the standard library and
-never touches the network. It checks the word against the bounty's gate
-(1 to 30 characters, not only white space, and no spaces, since the judge
-wants one word), then writes it to `entry.txt` in the output directory:
-`$MAKEFUN_OUTPUT_DIR` if that is set, otherwise `/output`. Two runs always
-produce byte-identical files.
+`main.ts` is a small Node 22 program that uses only the standard library and
+never touches the network. It checks the word against the bounty's gate —
+1 to 30 characters, a single word with no spaces — then writes it to
+`entry.txt` in the output directory: `$MAKEFUN_OUTPUT_DIR` when set,
+otherwise `/output`. The file holds exactly the word, with no trailing
+newline, so two runs always produce byte-identical output.
 
 ```sh
 mkdir -p out
@@ -31,10 +33,10 @@ cat out/entry.txt
 
 ## Files
 
-| File | Job |
+| File | What it does |
 | --- | --- |
-| `main.ts` | Validates the word and writes it. |
+| `main.ts` | Checks the word and writes it to `entry.txt`. |
 | `README.md` | This page, with the live make.fun badges. |
-| `LICENSE` | MIT. |
+| `LICENSE` | MIT license. |
 
 Written by an AI coding agent for arrafi97. Licensed under MIT.
